@@ -4,19 +4,16 @@ import { icons } from '../../constants';
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
-    <View className="items-center justify-center gap-2">
+    <View className="items-center justify-center gap-2 w-[100px] mt-6">
       <Image
         source={icon}
         resizeMode="contain"
         tintColor={color}
         className="w-6 h-6"
       />
-      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`} style={{ color: color }}>
-        {name}
-      </Text>
+      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`} style={{ color: color}}>{name}</Text>
     </View>
   )
-
 }
 
 const TabsLayout = () => {
@@ -31,7 +28,7 @@ const TabsLayout = () => {
             backgroundColor: '#161622',
             borderTopWidth: 1,
             borderTopColor: '#232533',
-            height: 84,
+            height: 90,
           }
         }}>
         <Tabs.Screen name="home" options={{
